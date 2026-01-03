@@ -12,6 +12,7 @@ function validateEventCode(eventCode: string): void {
   }
 }
 
+
 function validatePayload(payload: unknown): asserts payload is NotificationPayload {
   if (!payload || typeof payload !== "object" || Array.isArray(payload)) {
     throw new NotificationValidationError("payload must be a non-null object");
